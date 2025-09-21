@@ -145,7 +145,7 @@
 
     <!-- Стили для текстовых элементов -->
     <Style x:Key="FolderLabelStyle" TargetType="TextBlock">
-        <Setter Property="Foreground" Value="#FFDA0000"/>
+        <Setter Property="Foreground" Value="White"/>
         <Setter Property="Margin" Value="0,0,0,10"/>
         <Setter Property="FontSize" Value="16"/>
         <Setter Property="FontWeight" Value="Bold"/>
