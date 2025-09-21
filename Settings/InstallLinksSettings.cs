@@ -3,12 +3,15 @@
 	/// <summary>
 	/// Представляет настройки ссылок на скачивания.
 	/// </summary>
-	public class InstalLinksSettings
+	public class InstallLinksSettings
 	{
-		public string? TestAppInstalLink
+		/// <summary>
+		/// 
+		/// </summary>
+		public string? SteamInstalLink
 		{
 			get;
-			set;
+			init;
 		}
 	}
 }

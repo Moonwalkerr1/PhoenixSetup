@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="PhoenixSetup.Service.View.UserControls.InstallControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PhoenixSetup.Service.View.UserControls"
+             mc:Ignorable="d" 
+             Background="#232325">
+    <TabControl Style="{StaticResource MainTabControlStyle}">
+        <TabItem Header="Полная установка" Style="{StaticResource TabItemStyle}">
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Основная папка установки:"
+                           Style="{StaticResource FolderLabelStyle}"/>
+
+                <Grid Grid.Row="1" Margin="0,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="{Binding InstallationPath}"
+                               Style="{StaticResource PathTextStyle}"
+                               VerticalAlignment="Center"/>
+
+                    <Button Grid.Column="0"
+                            Content="Изменить"
+                            Style="{StaticResource SmallChangeButtonStyle}"
+                            Margin="5,0,0,0"/>
+                </Grid>
+
+                <TextBlock Grid.Row="2"
+                           Text="{Binding AdditionalPath}"
+                           Style="{StaticResource PathTextStyle}"
+                           Margin="0,0,0,20"/>
+
+                <Button Grid.Row="5"
+                        Content="Скачать и установить"
+                        Style="{StaticResource InstallButtonStyle}"
+                        Margin="0 0 0 165"/>
+            </Grid>
+        </TabItem>
+
+        <TabItem Header="Только установщики" Style="{StaticResource TabItemStyle}">
+            <Grid Margin="10">
+                <Button Content="Скачать"
+                        Style="{StaticResource InstallButtonStyle}"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"/>
+            </Grid>
+        </TabItem>
+    </TabControl>
+</UserControl>

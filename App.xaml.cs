@@ -21,13 +21,11 @@ namespace PhoenixSetup
 		#region Ovveride
 		protected override void OnStartup(StartupEventArgs e)
 		{
-			base.OnStartup(e);
-
 			var services = new ServiceCollection();
 
 			Configuration = Configuration = BuildConfiguration();
 
-			services.Configure<InstalLinksSettings>(Configuration.GetSection(nameof(InstalLinksSettings)));
+			services.Configure<InstallLinksSettings>(Configuration.GetSection(nameof(InstallLinksSettings)));
 
 			ConfigureSettings(services);
 			ConfigureServices(services);
@@ -60,7 +58,7 @@ namespace PhoenixSetup
 
 		private void ConfigureSettings(IServiceCollection services)
 		{
-			services.Configure<InstalLinksSettings>(Configuration!.GetSection(nameof(InstalLinksSettings)));
+			services.Configure<InstallLinksSettings>(Configuration!.GetSection(nameof(InstallLinksSettings)));
 		}
 		#endregion
 	}

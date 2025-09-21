@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="PhoenixSetup.Service.View.UserControls.AppListControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PhoenixSetup.Service.View.UserControls"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             Background="#232325">
+    <DockPanel>
+        <ListBox x:Name="ItemsList"
+                 Style="{StaticResource CheckboxListStyle}"
+                 ItemTemplate="{StaticResource CheckboxItemTemplate}">
+            <sys:String>Steam</sys:String>
+        </ListBox>
+    </DockPanel>
+</UserControl>
